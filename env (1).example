@@ -1,0 +1,22 @@
+# Copy this file to ".env" (same folder) and fill in your real values.
+# NEVER upload the real .env anywhere public or share it with anyone.
+
+# Free key from https://aistudio.google.com/apikey
+GEMINI_API_KEY=
+
+# Free key from https://pixabay.com/api/docs/ (used to find real photos for blog/project images)
+PIXABAY_API_KEY=
+
+# Your admin panel's gateway (Step 2 file)
+ADMIN_API_URL=https://admin.smartedgetech.in/agent-api.php
+
+# MUST match AGENT_API_KEY that you put in admin's own .env file (Step 1)
+ADMIN_AGENT_KEY=
+
+# One line describing your business, used by the agents to stay on-topic
+BUSINESS_CONTEXT=IoT, robotics, embedded systems, and practical project solutions with source code, technical guidance, and expert support
+
+# Telegram bot token (from @BotFather) and your chat id — for mobile notifications.
+# Leave blank to skip notifications.
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_CHAT_ID=

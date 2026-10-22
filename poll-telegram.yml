@@ -1,0 +1,34 @@
+name: Poll Telegram Approvals
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"   # checks every 20 minutes
+  workflow_dispatch: {}      # lets you also trigger it manually from the GitHub Actions tab
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Poll Telegram for Approve/Reject taps
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ADMIN_API_URL: ${{ secrets.ADMIN_API_URL }}
+          ADMIN_AGENT_KEY: ${{ secrets.ADMIN_AGENT_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          BUSINESS_CONTEXT: ${{ secrets.BUSINESS_CONTEXT }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python poll_telegram.py
