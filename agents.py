@@ -31,7 +31,7 @@ advanced technologies/platforms, and avoid naming or relying on them: Raspberry 
 NVIDIA Jetson, MongoDB, React.js, Python, Node.js, TensorFlow, OpenCV. Instead, focus on simple,
 foundational, approachable IoT/robotics/embedded-systems ideas — basic sensors, basic
 microcontrollers explained at an introductory level, simple automation/robotics concepts, and
-practical mini-projects that someone NEW to electronics/embedded systems could follow without
+practical mini-projects that practical, application-focused IoT/robotics solutions (real use-cases like monitoring, automation, attendance) without
 already knowing advanced frameworks or high-end hardware.
 """
 
@@ -119,7 +119,7 @@ WRITING STYLE (this decides whether readers stay and whether Google ranks the pa
   analogies. Explain each technical term in plain words the first time it appears.
 - Every paragraph must add real value. No filler, no repetition, no padding, no vague generalities.
 - BANNED phrases: "in today's fast-paced world", "delve", "unleash", "game-changer", "revolutionize", "in conclusion",
-  "it is important to note", "look no further", "dive into", "tapestry", "navigate the world of", "ever-evolving".
+  "it is important to note", "look no further", "dive into", "tapestry", "navigate the world of", "ever-evolving", "DIY", "do it yourself", "weekend project", "tinker", "let's build".
 - Use the primary keyword and its natural variations where they fit. Never stuff keywords.
 - A few times across the article (not in every section) use a callout:
   <blockquote><strong>Pro Tip:</strong> ...</blockquote> or <blockquote><strong>Common Mistake:</strong> ...</blockquote>
@@ -297,7 +297,7 @@ You are a senior embedded-systems engineer and technical writer for this busines
 
 <<SCOPE>>
 
-Design ONE complete, REAL, buildable project that a beginner-to-intermediate maker can build and that people search for.
+Design ONE complete, REAL, buildable project that a student or small business can use as a ready-made, professionally documented solution and that people search for.
 
 Title: <<TITLE>>
 Topic: <<TOPIC>>
@@ -312,6 +312,7 @@ Rules:
   functions, Serial debug prints, 70-160 lines, clear comments, meaningful names, no placeholders like "..." or
   "your code here". Use only the Arduino core and very common libraries (Wire.h, Servo.h, LiquidCrystal.h,
   LiquidCrystal_I2C.h, DHT.h, SoftwareSerial.h, ...). Pin numbers in the code must match "pin_map" exactly.
+- Do NOT use DIY / hobbyist / build-it-yourself language. Write like a professional solution provider.
 
 Reply with ONLY valid JSON in exactly this shape:
 {
