@@ -319,9 +319,8 @@ Reply with ONLY valid JSON in exactly this shape:
   "board": "Arduino Uno",
   "summary": "what the project does, 2-3 sentences",
   "difficulty": "Beginner or Intermediate",
-  "build_time": "for example 2-3 hours",
+  "use_case": "for example 2-3 hours",
   "components": [{"name": "...", "qty": "1", "purpose": "what it does in this project", "key_specs": "for example 5V, range 2-400 cm"}],
-  "tools": ["tools and software needed, for example USB cable, Arduino IDE, screwdriver"],
   "pin_map": [{"component_pin": "HC-SR04 VCC", "board_pin": "5V", "notes": "power"}],
   "libraries": ["library name and how to get it, or 'built into the Arduino IDE'"],
   "behaviour": "step by step description of what the running project does",
@@ -532,7 +531,6 @@ def project_spec_agent(run_id, plan, topic, angle):
         if spec.get("components") and spec.get("pin_map") and (spec.get("code") or "").strip():
             spec["board"] = spec.get("board") or "Arduino Uno"
             spec["features"] = _as_list(spec.get("features"))
-            spec["tools"] = _as_list(spec.get("tools"))
             spec["libraries"] = _as_list(spec.get("libraries"))
             spec["code_title"] = spec.get("code_title") or f"Complete sketch: {plan['title']}"
             log_step(run_id, "Project Agent", "done",
