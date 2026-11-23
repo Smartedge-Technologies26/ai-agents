@@ -36,7 +36,7 @@ from config import SITE_URL, BRAND_NAME
 PROJECT_SECTIONS = [
     {"heading": "{kw}: Project Overview", "words": 300, "format": "prose", "with_code": False,
      "points": ["what the project does, in simple words", "the real problem it solves",
-                "who it is for and what they will gain", "difficulty level and approximate build time",
+                "who it is for and what they will gain",
                 "what the finished project looks like and does"]},
     {"heading": "Real-World Uses of {kw}", "words": 300, "format": "prose", "with_code": False,
      "points": ["3-5 realistic places this idea is used in homes, schools, farms, shops or industry",
@@ -45,7 +45,7 @@ PROJECT_SECTIONS = [
      "points": ["basic electronics knowledge needed", "basic programming knowledge needed",
                 "what a total beginner should read or practise first", "how long the learning curve is"]},
     {"heading": "Components Required for {kw}", "words": 450, "format": "components_table", "with_code": False,
-     "points": ["introduce the parts list", "what each component is and why it was chosen",
+     "points": ["what each component is and why it was chosen",
                 "specifications that matter", "acceptable substitutes and what to look for when buying"]},
     {"heading": "Tools and Software You Need", "words": 220, "format": "list", "with_code": False,
      "points": ["hardware tools", "Arduino IDE setup and board selection", "libraries and how to install them",
